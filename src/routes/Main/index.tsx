@@ -1,14 +1,14 @@
 import { Outlet } from "react-router"
-import { ContainerStyled } from "../../components/Container/styles"
+import { WrapperStyled } from "../../components/Wrapper/styles"
 import Header from "../../components/Header"
 
 const Container = () => {
     return (
         <>
             <Header />
-            <ContainerStyled>
+            <WrapperStyled>
                 <Outlet />
-            </ContainerStyled>
+            </WrapperStyled>
         </>
     )
 }

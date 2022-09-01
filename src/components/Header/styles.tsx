@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { styles } from "../../assets/styles/global";
-import { ContainerStyled } from "../Container/styles";
+import { WrapperStyled } from "../Wrapper/styles";
 
-export const HeaderContainer = styled(ContainerStyled)`
+export const HeaderContainer = styled(WrapperStyled)`
     display: flex;
     justify-content: space-between;
     align-items: center;
