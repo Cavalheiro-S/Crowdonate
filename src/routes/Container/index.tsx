@@ -1,6 +1,7 @@
 import { Outlet } from "react-router"
 import { WrapperStyled } from "../../components/Wrapper/styles"
 import Header from "../../components/Header"
+import Footer from "../../Containers/Footer"
 
 const Container = () => {
     return (
@@ -9,6 +10,7 @@ const Container = () => {
             <WrapperStyled>
                 <Outlet />
             </WrapperStyled>
+            <Footer/>
         </>
     )
 }

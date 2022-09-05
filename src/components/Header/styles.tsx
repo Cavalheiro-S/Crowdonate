@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { styles } from "../../assets/styles/global";
+import { LinkWithoutStyle, styles } from "../../assets/styles/global";
 import { WrapperStyled } from "../Wrapper/styles";
 
 export const HeaderContainer = styled(WrapperStyled)`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 4rem;
     height: 100%;
 `
 
@@ -19,6 +20,6 @@ export const NavLink = styled.a`
     color: ${styles.dark}
 `
 
-export const LinkAction = styled(NavLink)`
+export const LinkAction = styled(LinkWithoutStyle)`
     color: ${styles.primary};
 `

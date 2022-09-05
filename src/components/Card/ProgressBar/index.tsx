@@ -1,19 +1,19 @@
-import { PercentageCompleted, WrapperPercentage } from "./styles"
-
+import MoneyLogo from "../../../assets/imgs/moneyLogo.svg";
+import { EarnedValueMoney, EarnedValueTitle, PercentageCompleted, WrapperEarnedValue, WrapperEarnedValueText, WrapperPercentage } from "./styles";
 export default function ProgressBar({ percentage, value }: PropsProgressBar) {
     return (
         <div>
-            <span>{percentage}</span>
+            <span>{percentage}%</span>
             <WrapperPercentage>
-                <PercentageCompleted></PercentageCompleted>
+                <PercentageCompleted width={percentage}></PercentageCompleted>
             </WrapperPercentage>
-            <div>
-                <img src="" alt="" />
-                <div>
-                    <span>{value.toFixed(2)}</span>
-                    <span>Arrecadado</span>
-                </div>
-            </div>
+            <WrapperEarnedValue>
+                <img src={MoneyLogo} alt="Cash" />
+                <WrapperEarnedValueText>
+                    <EarnedValueMoney>R$ {value.toFixed(2)}</EarnedValueMoney>
+                    <EarnedValueTitle>Arrecadado</EarnedValueTitle>
+                </WrapperEarnedValueText>
+            </WrapperEarnedValue>
         </div>
     )
 }

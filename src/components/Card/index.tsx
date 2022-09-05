@@ -1,10 +1,11 @@
 import ProgressBar from "./ProgressBar";
 import { CardAutor, CardDescription, CardImage, CardInfo, CardTitle, WrapperCard } from "./styles";
-import backgroundCard from "../../assets/imgs/backgroundTest.png"
-export default function Card({ title, author, description }: PropsCard) {
+import backgroundCard from "../../assets/imgs/backgroundTest.jpg";
+
+export default function Card({ title, author, description, onClick }: PropsCard) {
 
     return (
-        <WrapperCard>
+        <WrapperCard onClick={() => onClick && onClick()}>
             <CardImage src={backgroundCard} alt="" />
             <CardInfo>
                 <CardTitle>{title}</CardTitle>
@@ -19,5 +20,6 @@ export default function Card({ title, author, description }: PropsCard) {
 interface PropsCard {
     title: string,
     author: string,
-    description: string
+    description: string,
+    onClick?: Function
 }

@@ -6,6 +6,11 @@ export const WrapperCard = styled.div`
     border: 1px solid #ddd;
     border-radius: 8px;
     width: 300px;
+    cursor: pointer;
+    transition: ease all 0.2s;
+    :hover{
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    }
 `
 
 export const CardImage = styled.img`
@@ -33,4 +38,5 @@ export const CardAutor = styled.span`
 export const CardDescription = styled.span`
     font-size: 0.8rem;
     margin: 8px 0;
+    line-height: 24px;
 `

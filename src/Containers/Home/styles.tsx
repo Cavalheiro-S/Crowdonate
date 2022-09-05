@@ -8,7 +8,7 @@ export const ContainerHome = styled.div`
     justify-content: center;
     gap: 48px;
     width: 100%;
-    height: 100%;
+    height: 90vh;
 `
 
 export const Title = styled.h1`
@@ -38,3 +38,10 @@ export const ButtonHome = styled(ButtonStyled)`
     }
 `
 
+export const WrapperTitle = styled.div`
+    align-self: flex-start;
+`
+
+export const WrapperImage = styled.div`
+    align-self: center;
+`

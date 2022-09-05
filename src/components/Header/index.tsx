@@ -1,4 +1,5 @@
 import SVGLogo from "../../assets/imgs/SVGlogo.svg";
+import { LinkWithoutStyle } from "../../assets/styles/global";
 import { HeaderContainer, LinkAction, NavLink, NavOptions } from "./styles";
 
 const Header = () => {
@@ -6,10 +7,12 @@ const Header = () => {
     return (
         <header>
             <HeaderContainer>
-                <img src={SVGLogo} alt="" />
+                <LinkWithoutStyle to={"/"}>
+                    <img src={SVGLogo} alt="" />
+                </LinkWithoutStyle>
                 <NavOptions>
                     <NavLink href="">Explorar</NavLink>
-                    <LinkAction href="">Criar uma Campanha</LinkAction>
+                    <LinkAction to="/">Criar uma Campanha</LinkAction>
                 </NavOptions>
             </HeaderContainer>
         </header>
