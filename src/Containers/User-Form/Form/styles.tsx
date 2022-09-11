@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { styles } from "../../../assets/styles/global";
-import Button from "../../../components/Button";
 import { ButtonStyled } from "../../../components/Button/styles";
 
 export const FormStyled = styled.form`
