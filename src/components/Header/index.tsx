@@ -1,15 +1,15 @@
-import SVGLogo from "../../assets/imgs/SVGLogo.svg";
+import LogoSVG from "../../assets/imgs/LogoSVG.svg";
+import UserIcon from "../../assets/imgs/UserIconSVG.svg";
 import { LinkWithoutStyle } from "../../assets/styles/global";
 import { HeaderContainer, ImageSignUser, LinkAction, NavLink, NavOptions, WrapperSignUser } from "./styles";
-import UserIcon from "../../assets/imgs/UserIconSVG.svg";
 
 const Header = () => {
 
     return (
         <header>
             <HeaderContainer>
-                <LinkWithoutStyle to={"/"}>
-                    <img src={SVGLogo} alt="" />
+                <LinkWithoutStyle to="">
+                    <img src={LogoSVG} alt="Logo do site" />
                 </LinkWithoutStyle>
                 <NavOptions>
                     <NavLink to="">Explorar</NavLink>

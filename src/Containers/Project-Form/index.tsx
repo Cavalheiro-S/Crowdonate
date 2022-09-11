@@ -1,7 +1,6 @@
+import FormProjectSVG from "../../assets/imgs/FormProjectSVG.svg";
 import Form from "./Form";
 import { WrapperProjectForm } from "./styles";
-import FormProjectSVG from "../../assets/imgs/FormProjectSVG.svg";
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 interface initialValuesType {
     name?: string,

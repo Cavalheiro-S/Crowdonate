@@ -1,11 +1,11 @@
 import { FooterStyled, ImageLogo } from "./styles";
-import Logo from "../../assets/imgs/SVGLogo.svg";
+import LogoSVG from "../../assets/imgs/LogoSVG.svg";
 
 const Footer = () => {
 
     return(
         <FooterStyled>
-            <ImageLogo src={Logo}/>
+            <ImageLogo src={LogoSVG}/>
         </FooterStyled>
     )
 }
