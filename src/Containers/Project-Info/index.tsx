@@ -1,11 +1,9 @@
-import BackgroundImage from "../../assets/imgs/backgroundTest.jpg";
 import ProgressInfo from "./ProgressInfo";
-import { DescriptionParagraph, ImageBackgroundProject, ProjectDescription, ProjectDescriptionWrapper, ProjectTitle, ProjectTitleBackground, SectionProject } from "./styles";
+import { DescriptionParagraph, ProjectDescription, ProjectDescriptionWrapper, ProjectTitle, ProjectTitleBackground, SectionProject } from "./styles";
 
 const ProjectInfo = () => {
     return (
         <SectionProject>
-            <ImageBackgroundProject src={BackgroundImage} />
             <ProjectTitleBackground>
                 <ProjectTitle>Project Title</ProjectTitle>
             </ProjectTitleBackground>

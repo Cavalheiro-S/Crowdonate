@@ -1,9 +1,9 @@
-import { PropsWithChildren } from "react"
+import { PropsWithChildren } from "react";
 import { ButtonStyled } from "./styles";
 
-const Button =  ({children}: PropsWithChildren) => {
+const Button = ({ children }: PropsWithChildren) => {
 
-    return(
+    return (
         <ButtonStyled>{children}</ButtonStyled>
     )
 }

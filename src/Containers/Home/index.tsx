@@ -13,7 +13,7 @@ export default function HomeContainer() {
                     <SubTitle>
                         Conheça e apoie campanhas que você se identifica, ou crie campanhas para se conectar com outras pessoas
                     </SubTitle>
-                    <LinkWithoutStyle to="/">
+                    <LinkWithoutStyle to="/new/project">
                         <ButtonHome>
                             Criar uma campanha
                         </ButtonHome>

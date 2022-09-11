@@ -15,11 +15,20 @@ export const NavOptions = styled.div`
     gap: 24px;
 `
 
-export const NavLink = styled.a`
+export const NavLink = styled(LinkWithoutStyle)`
     text-decoration: none;
-    color: ${styles.dark}
+    color: ${styles.dark};
 `
 
 export const LinkAction = styled(LinkWithoutStyle)`
     color: ${styles.primary};
+`
+
+export const WrapperSignUser = styled.div`
+    display: flex;
+    gap: 24px;
+`
+
+export const ImageSignUser = styled.img`
+
 `

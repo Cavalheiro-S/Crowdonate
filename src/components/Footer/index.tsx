@@ -1,5 +1,5 @@
 import { FooterStyled, ImageLogo } from "./styles";
-import Logo from "../../assets/imgs/SVGLogoWhite.svg";
+import Logo from "../../assets/imgs/SVGLogo.svg";
 
 const Footer = () => {
 

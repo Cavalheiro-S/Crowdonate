@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import { styles } from "../../assets/styles/global";
 
 export const FooterStyled = styled.footer`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    background-color: ${styles.primary};
     height: 200px;
     padding: 24px;
 `

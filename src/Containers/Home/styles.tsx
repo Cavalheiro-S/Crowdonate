@@ -39,7 +39,10 @@ export const ButtonHome = styled(ButtonStyled)`
 `
 
 export const WrapperTitle = styled.div`
+    display: flex;
+    flex-direction:column;
     align-self: flex-start;
+    gap: 40px;
 `
 
 export const WrapperImage = styled.div`

@@ -1,6 +1,7 @@
-import SVGLogo from "../../assets/imgs/SVGlogo.svg";
+import SVGLogo from "../../assets/imgs/SVGLogo.svg";
 import { LinkWithoutStyle } from "../../assets/styles/global";
-import { HeaderContainer, LinkAction, NavLink, NavOptions } from "./styles";
+import { HeaderContainer, ImageSignUser, LinkAction, NavLink, NavOptions, WrapperSignUser } from "./styles";
+import UserIcon from "../../assets/imgs/UserIconSVG.svg";
 
 const Header = () => {
 
@@ -11,9 +12,15 @@ const Header = () => {
                     <img src={SVGLogo} alt="" />
                 </LinkWithoutStyle>
                 <NavOptions>
-                    <NavLink href="">Explorar</NavLink>
-                    <LinkAction to="/">Criar uma Campanha</LinkAction>
+                    <NavLink to="">Explorar</NavLink>
+                    <LinkAction to="/new/project">Criar uma Campanha</LinkAction>
                 </NavOptions>
+
+                <WrapperSignUser>
+                    <ImageSignUser src={UserIcon} alt="ícone de usuário" />
+                    <NavLink to="/new/user">Cadastrar Usuário</NavLink>
+                </WrapperSignUser>
+
             </HeaderContainer>
         </header>
     )

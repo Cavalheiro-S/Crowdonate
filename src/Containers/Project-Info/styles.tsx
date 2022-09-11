@@ -4,26 +4,18 @@ export const SectionProject = styled.section`
     display: flex;
     flex-direction:column;
     height: 100%;
-`
-
-export const ImageBackgroundProject = styled.img`
-    width: 100%;
-    z-index: -1;
+    padding: 4rem 0;
 `
 
 export const ProjectTitleBackground = styled.div`
     padding: 3rem 4rem;
     background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.6) 100%);
     width: 100%;
-    position: absolute;
-    margin-top: 20rem;
 `
 
 export const ProjectDescriptionWrapper = styled.div`
     display: flex;
     background-color: white;
-    position: absolute;
-    margin-top: 27.5rem;
     padding: 0 4rem;
     gap: 10rem;
 `
