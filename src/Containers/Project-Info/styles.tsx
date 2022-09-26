@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import ImageExample from "../../assets/imgs/backgroundTest.jpg"
+import { LinkWithoutStyle, styles } from "../../assets/styles/global";
+
 export const SectionProject = styled.section`
     display: flex;
     flex-direction:column;
@@ -36,7 +38,29 @@ export const ProjectDescription = styled.h4`
     font-size: 1.3rem;
     font-family: "Montserrat", sans-serif;
     font-weight: normal;
-    margin: 3rem 0;
+    margin: 1rem 0 3rem 0;
+`
+
+export const ProjectDescriptionWrapperEdit = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 40px;
+`
+
+export const ProjectDescriptionWrapperEditLabel = styled(LinkWithoutStyle)`
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    font-size: 24px;
+    margin-top: 2rem;
+    font-family: "Montserrat", "sans-serif";
+    color: ${styles.primary};
+`
+
+export const EditIcon = styled.img`
+    width: 24px;
+    height: 24px;
 `
 
 export const DescriptionParagraph = styled.p`

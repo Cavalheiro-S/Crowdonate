@@ -20,6 +20,11 @@ export const NavLink = styled(LinkWithoutStyle)`
     color: ${styles.dark};
 `
 
+export const NavLinkLogin = styled(LinkWithoutStyle)`
+    text-decoration: none;
+    color: ${styles.primary};
+`
+
 export const LinkAction = styled(LinkWithoutStyle)`
     color: ${styles.primary};
 `

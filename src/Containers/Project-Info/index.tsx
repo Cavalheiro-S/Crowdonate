@@ -1,5 +1,6 @@
+import EditIconSVG from "../../assets/imgs/penEditSVG.svg";
 import ProgressInfo from "./ProgressInfo";
-import { DescriptionParagraph, ProjectDescription, ProjectDescriptionWrapper, ProjectTitle, ProjectTitleBackground, SectionProject } from "./styles";
+import { DescriptionParagraph, EditIcon, ProjectDescription, ProjectDescriptionWrapper, ProjectDescriptionWrapperEdit, ProjectDescriptionWrapperEditLabel, ProjectTitle, ProjectTitleBackground, SectionProject } from "./styles";
 
 const ProjectInfo = () => {
     return (
@@ -9,6 +10,12 @@ const ProjectInfo = () => {
             </ProjectTitleBackground>
             <ProjectDescriptionWrapper>
                 <div>
+                    <ProjectDescriptionWrapperEdit>
+                        <ProjectDescriptionWrapperEditLabel to="/edit/project">
+                            <EditIcon src={EditIconSVG} />
+                            Editar
+                        </ProjectDescriptionWrapperEditLabel>
+                    </ProjectDescriptionWrapperEdit>
                     <ProjectDescription>Project Description</ProjectDescription>
                     <DescriptionParagraph>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.<br />

@@ -1,7 +1,7 @@
 import LogoSVG from "../../assets/imgs/LogoSVG.svg";
 import UserIcon from "../../assets/imgs/UserIconSVG.svg";
 import { LinkWithoutStyle } from "../../assets/styles/global";
-import { HeaderContainer, ImageSignUser, LinkAction, NavLink, NavOptions, WrapperSignUser } from "./styles";
+import { HeaderContainer, ImageSignUser, LinkAction, NavLink, NavLinkLogin, NavOptions, WrapperSignUser } from "./styles";
 
 const Header = () => {
 
@@ -18,7 +18,8 @@ const Header = () => {
 
                 <WrapperSignUser>
                     <ImageSignUser src={UserIcon} alt="ícone de usuário" />
-                    <NavLink to="/new/user">Cadastrar Usuário</NavLink>
+                    <NavLinkLogin to="/login/user">Login</NavLinkLogin>
+                    <NavLink to="/signin/user">Cadastrar</NavLink>
                 </WrapperSignUser>
 
             </HeaderContainer>
