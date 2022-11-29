@@ -1,22 +1,18 @@
 import { FormControl, FormLabel, Input } from "@chakra-ui/react";
-import { FormikHelpers, useFormik } from "formik";
 import { ButtonForm, FormStyled, TitleForm, WrapperForm } from "./styles";
 
 interface FormProps {
     initialValues: object,
-    onSubmit(values: object, formikHelpers: FormikHelpers<object>): void | Promise<any>,
-    validate(values: object): void,
     title?: string,
 }
 
-const Form = ({ initialValues, validate, title, onSubmit }: FormProps) => {
+const Form = ({ initialValues, title, }: FormProps) => {
 
-    const formik = useFormik({ initialValues, onSubmit, validate: validate });
 
     return (
         <WrapperForm>
             <TitleForm>{title}</TitleForm>
-            <FormStyled onSubmit={formik.handleSubmit}>
+            <FormStyled >
                 <FormControl>
                     <FormLabel>Nome</FormLabel>
                     <Input id="name" name="name" placeholder="Ex: Lucas" />

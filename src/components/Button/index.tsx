@@ -1,7 +1,10 @@
 import { PropsWithChildren } from "react";
 import { ButtonStyled } from "./styles";
 
-const Button = ({ children }: PropsWithChildren) => {
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+
+const Button = ({ children }: ButtonProps) => {
 
     return (
         <ButtonStyled>{children}</ButtonStyled>

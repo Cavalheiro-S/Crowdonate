@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { styles } from "../../../assets/styles/global";
 import { ButtonStyled } from "../../../components/Button/styles";
-import { TabPanel } from "@chakra-ui/react";
 
 export const FormStyled = styled.form`
     display: flex;
@@ -32,8 +31,7 @@ export const ButtonForm = styled(ButtonStyled)`
     }
 `
 
-export const TabPanelStyled = styled(TabPanel)`
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+export const ErrorMessage = styled.p`
+    color: red;
+    font-size: 0.8rem;
 `

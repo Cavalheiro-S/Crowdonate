@@ -1,0 +1,21 @@
+export enum CategoryProps {
+    'Arquitetura e Urbanismo' = '1',
+    'Artes' = '2',
+    'Ciencia e Tecnologia' = '3',
+    'Cinema e Video' = '4',
+    'Design e Moda' = '5',
+    'Educacao' = '6',
+    'Esporte' = '7',
+    'Eventos' = '8',
+    'Fotografia' = '9',
+    'Gastronomia' = '10',
+    'Jogos' = '11',
+    'Jornalismo' = '12',
+    'Literatura' = '13',
+    'Música' = '14',
+    'Pessoais' = '15',
+    'Podcast' = '16',
+    'Quadrinhos' = '17',
+    'Socio ambiental' = '18',
+    'Teatro e Danca' = '19'
+}

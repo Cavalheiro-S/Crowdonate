@@ -15,7 +15,7 @@ export default function HomeContainer() {
                     </SubTitle>
                     <LinkWithoutStyle to="/new/project">
                         <ButtonHome>
-                            Criar uma campanha
+                            Criar um Projeto
                         </ButtonHome>
                     </LinkWithoutStyle>
                 </WrapperTitle>
