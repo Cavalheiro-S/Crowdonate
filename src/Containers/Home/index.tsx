@@ -1,6 +1,6 @@
 import SVGCollaboration from "../../assets/imgs/SVGcollaborating.svg";
 import { LinkWithoutStyle } from "../../assets/styles/global";
-import MainProjects from "../Main-Projects";
+import MainProjects from "../MainProjects";
 import { ButtonHome, ContainerHome, SubTitle, Title, WrapperImage, WrapperTitle } from './styles';
 export default function HomeContainer() {
     return (
