@@ -5,6 +5,22 @@ Projeto Crowfunding que pretende simular uma plataforma que possibilita os usuá
   <img width="400px" src="https://github.com/Cavalheiro-S/Assets/blob/main/Crowdfunding/Tela-Inicial-2.png" />
 </div>
 
+## ⚙ Instalando
+
+### Clonando o repositório
+```bash
+git clone https://github.com/Cavalheiro-S/Crowdonate
+```
+
+### Instalando pacotes
+```bash
+npm i
+```
+
+### Iniciando o projeto
+```bash
+npm start
+```
 
 ## Tecnologias 🚀
 Tecnologias utilizadas no projeto: 
