@@ -1,14 +1,16 @@
 import FormProjectSVG from "../../assets/imgs/FormProjectSVG.svg";
 import Form from "./Form";
-import { WrapperProjectForm } from "./styles";
+import { LinkBack, WrapperProjectForm } from "./styles";
 
 const ProjectForm = () => {
 
     return (
         <WrapperProjectForm>
+            <LinkBack to="/dashboard">
+                Voltar
+            </LinkBack>
             <img src={FormProjectSVG} alt="Formulário de projeto" />
             <Form />
-
         </WrapperProjectForm>
     )
 }

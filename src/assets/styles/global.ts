@@ -4,7 +4,8 @@ import styled, { createGlobalStyle } from "styled-components";
 export const styles = {
     primary: "#2DC653",
     dark: "#333",
-    gray: "#9B9A9A"
+    gray: "#9B9A9A",
+    delete: "#B91C1C"
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -13,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
     }
-    body, html{
+    body, html, #root{
         font-size: 16px;
         height: 100%;
         margin: 0;

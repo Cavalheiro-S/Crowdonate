@@ -6,7 +6,7 @@ export const ContainerNotFound = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 70vh;
 `
 
 export const TitleNotFound = styled.h2`

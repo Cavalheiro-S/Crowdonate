@@ -23,6 +23,9 @@ export const NavLink = styled(LinkWithoutStyle)`
 export const NavLinkLogin = styled(LinkWithoutStyle)`
     text-decoration: none;
     color: ${styles.primary};
+    &:hover {
+        text-decoration: underline;
+    }
 `
 
 export const LinkAction = styled(LinkWithoutStyle)`

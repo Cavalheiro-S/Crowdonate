@@ -31,7 +31,8 @@ export const WrapperEarnedValueText = styled.div`
 
 export const EarnedValueTitle = styled.span`
     font-size: 0.8rem;
-    color: ${styles.gray};
+    font-weight: bold;
+    color: ${styles.primary};
 `
 
 export const EarnedValueMoney = styled.span`

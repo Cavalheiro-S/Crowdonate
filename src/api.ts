@@ -1,18 +1,15 @@
 import axios from "axios"
 
-export interface ErrorResponseProps{
+export interface ResponseProps<T> {
     isSuccessful: boolean,
-    message: string,
-    errors: Array<any>
+    data?: T
+    message?: string,
+    errors?: Array<any>
 }
 
-export interface TokenResponseProps{
-    acess_token: string,
-    expirations: string,
-}
-
-export interface ProjectResponseProps{
+export interface ProjectResponseProps {
     id: number,
+    idUsuario: number,
     nome: string,
     descricao: string,
     links: string,

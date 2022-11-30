@@ -1,7 +1,7 @@
+import { Spinner } from "@chakra-ui/spinner";
 import styled from "styled-components";
 import { styles } from "../../../assets/styles/global";
 import { ButtonStyled } from "../../../components/Button/styles";
-import { TabPanel } from "@chakra-ui/react";
 
 export const FormStyled = styled.form`
     display: flex;
@@ -32,8 +32,21 @@ export const ButtonForm = styled(ButtonStyled)`
     }
 `
 
-export const TabPanelStyled = styled(TabPanel)`
+export const ButtonFormDelete = styled(ButtonForm)`
+    background-color: ${styles.delete};
+    border: 1px solid ${styles.delete};
+    :hover{
+        background-color: white;
+        color: ${styles.delete};
+    }
+`
+
+export const WrapperButton = styled.div`
     display: flex;
-    flex-direction: column;
-    gap: 24px;
+    justify-content: flex-end;
+    gap: 12px
+`
+
+export const SpinnerLoading = styled(Spinner)`
+    color: ${styles.primary};
 `

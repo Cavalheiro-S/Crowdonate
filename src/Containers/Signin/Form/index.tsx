@@ -1,11 +1,12 @@
-import { FormControl, FormLabel, Input } from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, Spinner } from "@chakra-ui/react";
 import { useContext, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { api, TokenResponseProps } from "../../../api";
+import { api } from "../../../api";
 import { AuthContext } from "../../../Context/authContext";
-import { useAuth } from "../../../hooks/useAuth";
+import { UserContext, UserContextData } from "../../../Context/userContext";
 import { ButtonForm, ErrorMessage, FormStyled, TitleForm, WrapperForm } from "./styles";
-import { useForm, SubmitHandler } from "react-hook-form";
+
 
 interface FormProps {
     title?: string,
@@ -19,29 +20,42 @@ interface Inputs {
 const Form = ({ title, }: FormProps) => {
 
     const navigate = useNavigate();
-    const { setAuth, setAutenticated } = useContext(AuthContext);
-    const apiAuth = useAuth();
-
-    const { register, watch, handleSubmit, formState: { errors } } = useForm<Inputs>();
+    const { setAutenticated } = useContext(AuthContext);
+    const { setUser } = useContext(UserContext)
+    const [loading, setLoading] = useState(false);
+    const { register, handleSubmit, formState: { errors }, setError } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = inputs => handleSubmitHookForm(inputs);
 
     const handleSubmitHookForm = async (inputs: Inputs) => {
-        //await getToken();
-        setAutenticated(true);
-        navigate("/dashboard");
+        await getLoggin(inputs.email, inputs.password);
     }
 
-    const getToken = async () => {
+    const getLoggin = async (email: string, senha: string) => {
         try {
-            const formData = new FormData();
-            formData.append("Email", watch("email"));
-            formData.append("Senha", watch("password"));
-            const response = await api.post<TokenResponseProps>("/usuario/token", formData);
-            setAuth({ token: response.data.acess_token, expirations: response.data.expirations });
-
-            navigate("/dashboard");
+            setLoading(true);
+            const params = {
+                email,
+                senha
+            };
+            const response = await api.get("usuario/login", { params });
+            if (response.data.isSuccess) {
+                navigate("/dashboard");
+                setAutenticated(true);
+                const user: UserContextData = {
+                    id: response.data.data.id,
+                    name: response.data.data.nome,
+                    email: response.data.data.email,
+                    password: response.data.data.senha,
+                    phone: response.data.data.telefone,
+                }
+                setUser(user);
+            }
+            else throw new Error(response.data.message);
         } catch (error) {
-            console.log({ email: "Email ou senha inválidos" });
+            setError("email", { type: "custom", message: "Email ou senha incorretos" });
+        }
+        finally {
+            setLoading(false);
         }
     }
 
@@ -61,7 +75,10 @@ const Form = ({ title, }: FormProps) => {
                         {...register("password", { required: "A senha não pode ser vazia" })} />
                     {errors.password && <ErrorMessage >{errors.password.message}</ErrorMessage>}
                 </FormControl>
-                <ButtonForm type="submit">Enviar</ButtonForm>
+                <ButtonForm type="submit">
+                    {loading && <Spinner />}
+                    Enviar
+                </ButtonForm>
             </FormStyled>
         </WrapperForm>
     )

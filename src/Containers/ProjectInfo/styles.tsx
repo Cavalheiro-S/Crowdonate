@@ -19,9 +19,9 @@ export const ProjectTitleBackground = styled.div`
 
 export const ProjectDescriptionWrapper = styled.div`
     display: flex;
+    flex-direction: column;
     background-color: white;
     padding: 0 4rem;
-    gap: 10rem;
 `
 
 export const ProjectTitle = styled.h3`
@@ -29,6 +29,7 @@ export const ProjectTitle = styled.h3`
     font-family: "Montserrat", sans-serif;
     margin: 0;
     font-size: 1.6rem;
+    font-weight: bold;
     color: white;
     padding: 2rem 0;
     bottom:0;

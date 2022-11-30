@@ -4,7 +4,6 @@ export const FooterStyled = styled.footer`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    height: 200px;
     padding: 24px;
 `
 

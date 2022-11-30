@@ -4,10 +4,12 @@ import LogoSVG from "../../assets/imgs/LogoSVG.svg";
 import UserIcon from "../../assets/imgs/UserIconSVG.svg";
 import { LinkWithoutStyle } from "../../assets/styles/global";
 import { AuthContext } from "../../Context/authContext";
-import { HeaderContainer, ImageSignUser, LinkAction, LinkLoggout, NavLink, NavLinkLogin, NavOptions, WrapperSignUser } from "./styles";
+import { UserContext } from "../../Context/userContext";
+import { HeaderContainer, ImageSignUser, LinkLoggout, NavLink, NavLinkLogin, NavOptions, WrapperSignUser } from "./styles";
 
 const Header = () => {
-    const { auth, autenticated, setAutenticated } = useContext(AuthContext);
+    const { autenticated, setAutenticated } = useContext(AuthContext);
+    const { user } = useContext(UserContext);
     const navigate = useNavigate();
 
     const handleLogout = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -39,12 +41,11 @@ const Header = () => {
         return (
             <>
                 <NavOptions>
-                    <NavLink to="">Explorar</NavLink>
-                    <LinkAction to="/new/project">Criar uma Campanha</LinkAction>
+                    <NavLinkLogin to="/dashboard">Dashboard</NavLinkLogin>
                 </NavOptions>
                 <WrapperSignUser>
                     <ImageSignUser src={UserIcon} alt="ícone de usuário" />
-                    <h3>Logado como "Usuário"</h3>
+                    <h3>Logado como {user?.name}</h3>
                     <LinkLoggout onClick={handleLogout}>Sair</LinkLoggout>
                 </WrapperSignUser>
             </>

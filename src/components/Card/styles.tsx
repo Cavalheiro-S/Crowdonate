@@ -39,4 +39,6 @@ export const CardDescription = styled.span`
     font-size: 0.8rem;
     margin: 8px 0;
     line-height: 24px;
+    height: 80px;
+    overflow-y: auto;
 `

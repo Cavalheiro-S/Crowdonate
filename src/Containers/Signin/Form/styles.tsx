@@ -20,6 +20,9 @@ export const TitleForm = styled.h3`
 `
 
 export const ButtonForm = styled(ButtonStyled)`
+    display: flex;
+    justify-content: center;
+    gap: 8px;
     border: 1px solid ${styles.primary};
     background-color: ${styles.primary};
     padding: 8px;
